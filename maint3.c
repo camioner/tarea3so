@@ -4,12 +4,12 @@
 #include <stdbool.h>
 #include <time.h>
 //tamaño de procesos definido aca
-int random_between(int memory_size){ 
+int random_between(int memory_size,int  min, double max){ 
     srand(time(NULL));
 
     // 2. Definir el rango deseado
-    double min = 10.5;
-    double max = 20.2;
+    //double min = 1.5;
+    //double max = 2.2;
 
     // 3. Generar un número aleatorio en el rango
     //  - rand() / RAND_MAX genera un número entre 0.0 y 1.0
@@ -25,14 +25,14 @@ int page_usage(int proceso, int tam_page){
     return page_usage;
 }
 
-int main(){
+int main(){ 
     //tamaño de memoria a ram
     int memory_size ;
     printf("Ingrese el tamaño de memoria a reservar: ");
     scanf("%d", &memory_size);
 
     //memoria virtual para el swap
-    int virtual_memory = random_between(memory_size);
+    int virtual_memory = random_between(memory_size,1.5,4.5);
 
     // tamaño de la pagina 
     int tam_page;
@@ -44,8 +44,20 @@ int main(){
     while (!lleno)
     {
         sleep(2);
-        //tamaño del proceso 
+        //puedo crear una variable y modificarla constantemente pero guardo el valor en un stack , aunq 
+        //cmo uedo hacer para que el valor sea guardado y se pueda ocupar?
+        int proceso_size = random_between(memory_size,0.1,(double)memory_size);
+        stack procesos; 
+        processos.push(proceso_size);
+
         
+
+/*
+        int proceso[];
+        int i=0;i++;
+        //tamaño del proceso no puede ser mayor a la ram fisica
+        proceso[i]=crear_proceso();
+*/        
         
     }
     
