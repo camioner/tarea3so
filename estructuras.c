@@ -1,10 +1,18 @@
 //linked list 
-void node(){
 
-}
-void stack(){
+typedef struct Node
+{
+   int data;
+   struct nodo *next;
+}node;
 
-}
-void push(int proceso_size){
-    
-}
+typedef struct queue
+{
+   int first;
+   int array[500];
+
+   node *head
+
+}queue;
+
+void 
