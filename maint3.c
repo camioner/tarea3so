@@ -41,14 +41,13 @@ int main(){
 
     //crear los procesos cada 2 segundos
     bool lleno = false;
+    queue* procesos = create_queue();
     while (!lleno)
     {
         sleep(2);
-        //puedo crear una variable y modificarla constantemente pero guardo el valor en un stack , aunq 
-        //cmo uedo hacer para que el valor sea guardado y se pueda ocupar?
         int proceso_size = random_between(memory_size,0.1,(double)memory_size);
-        stack procesos; 
-        processos.push(proceso_size);
+        queue procesos; 
+        procesos.enqueue(procesos,proceso_size);
 
         
 
