@@ -65,7 +65,7 @@ int deque(queue *queue)
 
 int peek(queue *queue)
 {
-   if (queue->head->data == NULL)
+   if (queue->head == NULL)
    {
       return -1;
    }

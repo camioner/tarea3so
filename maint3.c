@@ -3,8 +3,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
-
+#include <unistd.h>
 #include "estructuras.c"
+
 // tamaño de procesos definido aca
 int random_between(int memory_size, double min, double max)
 {
