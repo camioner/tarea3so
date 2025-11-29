@@ -38,6 +38,11 @@ int main()
     int tam_page;
     printf("Ingrese el tamaño de la página: ");
     scanf("%d", &tam_page);
+  
+  //int ram[] con la cantidad de paginas 
+  //int swap[] con el espacio para swap disponible 
+  //int cant paginas
+
 
     // crear los procesos cada 2 segundos
     bool lleno = false;
