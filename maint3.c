@@ -159,7 +159,7 @@ int main()
                     pos = 0;
                 }
 
-                ram[pos] = 999; // PID ficticio solo para mostrar movimiento
+                ram[pos] = 999; // PID falso solo para mostrar movimiento
             }
         }
     }
